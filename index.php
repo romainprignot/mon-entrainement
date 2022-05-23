@@ -1,7 +1,7 @@
 <?php
     session_start();
 	$template_pageTitle = "Mon entraînement sportif | ACCUEIL";
-    $template_pageDescription = "Mon entraînement sportif !";
+    $template_pageDescription = "Mon entraînement sportif !!!";
 
     $template_additionnalCSS = "";
     $template_pageScript = "";
