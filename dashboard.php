@@ -1,12 +1,6 @@
 <?php
-    session_start();
-
-    if(isset($_SESSION['connect']) && $_SESSION['connect'] == true){
-        header('Location: dashboard.php');
-        exit();
-    }
-
-	$template_pageTitle = "Mon entraînement sportif | ACCUEIL";
+    require("res/php/isConnected.php");
+	$template_pageTitle = "Mon entraînement sportif | MON TABLEAU DE BORD";
     $template_pageDescription = "Mon entraînement sportif !!!";
 
     $template_additionnalCSS = "";
@@ -14,6 +8,7 @@
 
     ob_start();
 ?>
+<h1>Bonjour</h1>
 <?php
     $template_pageContent = ob_get_clean();
     require("res/template/template.php");

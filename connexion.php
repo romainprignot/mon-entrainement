@@ -9,13 +9,14 @@
     ob_start();
 ?>
 <p id="pConnexion">Connectez-vous afin de pouvoir enregistrer vos entraînements et suivre votre progression.</p>
-<form id="formConnexion">
-    <input type="text" placeholder="Identifiant" class="formConnexionField">
-    <input type="password" placeholder="Mot de passe" class="formConnexionField">
-    <input type="submit" value="CONNEXION" class="formConnexionSubmit">
+<form id="formConnexion" method="post" action="res/php/connexion_account.php" class="formLogin">
+    <input type="text" placeholder="Identifiant" name="formConnexionLogin" class="formLoginField" required maxlength="20">
+    <input type="password" placeholder="Mot de passe" name="formConnexionPassword" class="formLoginField" required maxlength="40">
+    <input type="submit" value="CONNEXION" name="formConnexion" class="formLoginSubmit">
 </form>
-<hr>
+<hr class="hrConnexion">
 <p id="pConnexion">Pas encore de compte ?</p>
+<a href="create-account.php" class="aConnexion">Créer mon compte</a>
 <?php
     $template_pageContent = ob_get_clean();
     require("res/template/template.php");
